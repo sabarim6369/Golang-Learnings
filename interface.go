@@ -2,7 +2,6 @@ package main
 import "fmt"
 type interface1 interface{
 	sing() string
-	
 }
 type Student1 struct{
 

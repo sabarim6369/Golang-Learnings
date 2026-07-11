@@ -26,4 +26,13 @@ for i<len(numbers1){
 for i,value:=range numbers1{
 	fmt.Println("Element at index",i,"is",value)
 }
+
+//word count
+words:=[]string{"hello","world","hello","golang"}
+wordcount=map[string]int{}
+for key,value:=range words{
+	wordcount[value]++
+}
+fmt.Println(wordcount)
+var words1 map[string]int
 }

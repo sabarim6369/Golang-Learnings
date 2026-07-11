@@ -17,5 +17,11 @@ func main(){
 	delete(map1,"two")
 	fmt.Println(map1)
 	fmt.Println(map2)
+for key,value:=range map2{
+	fmt.Println("Key is",key,"Value is",value)
+}
+for _, value := range map2 {
+    fmt.Println(value)
+}
 
 }
