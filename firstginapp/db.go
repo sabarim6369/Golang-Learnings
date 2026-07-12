@@ -6,6 +6,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"fmt"
 )
 
 var DB *mongo.Database
@@ -23,6 +24,7 @@ func ConnectDB() {
 	if err != nil {
 		panic(err)
 	}
+	fmt.Println("✅ MongoDB Connected Successfully")
 
 	DB = client.Database("college")
 }
