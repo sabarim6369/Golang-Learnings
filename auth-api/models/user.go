@@ -1,7 +1,16 @@
 package models
 
+import (
+	"time"
+
+	"go.mongodb.org/mongo-driver/v2/bson"
+)
+
 type User struct {
-	Name     string `json:"name" bson:"name"`
-	Email    string `json:"email" bson:"email"`
-	Password string `json:"password" bson:"password"`
+	ID        bson.ObjectID `bson:"_id,omitempty" json:"id"`
+	Name      string        `bson:"name" json:"name"`
+	Email     string        `bson:"email" json:"email"`
+	Password  string        `bson:"password" json:"-"`
+	CreatedAt time.Time     `bson:"created_at" json:"created_at"`
+	UpdatedAt time.Time     `bson:"updated_at" json:"updated_at"`
 }
